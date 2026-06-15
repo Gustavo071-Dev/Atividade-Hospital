@@ -1,0 +1,261 @@
+/* ==========================================================================
+   CONTAINER PRINCIPAL E CABEÇALHO
+   ========================================================================== */
+
+.corpo-clinico-container {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clinica-header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.clinica-title {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.clinica-text {
+  font-size: 1.15rem;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   SEÇÃO DE FILTROS (BUSCA E TAGS)
+   ========================================================================== */
+
+.filter-section {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .filter-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.search-group {
+  flex: 1;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.filter-input:focus {
+  border-color: #2563eb;
+}
+
+.tags-group {
+  flex: 1.5;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-button {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag-button:hover {
+  background-color: #e2e8f0;
+}
+
+.tag-button.tag-active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   GRID E CARDS DOS MÉDICOS
+   ========================================================================== */
+
+.medicos-grid-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) { .medicos-grid-section { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .medicos-grid-section { grid-template-columns: repeat(3, 1fr); } }
+
+.medico-item-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   AJUSTE DE ÂNGULO DAS IMAGENS (CORREÇÃO DE COMPORTAMENTO)
+   ========================================================================== */
+
+.medico-image-wrapper {
+  height: 320px;            /* Altura calibrada para fotos verticais */
+  position: relative;
+  overflow: hidden;         
+  background-color: #f8fafc;
+}
+
+.medico-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Preenche o espaço mantendo as proporções */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom sutil ao passar o mouse */
+.medico-item-card:hover .medico-img {
+  transform: scale(1.04);
+}
+
+/* 🎥 AJUSTE INDIVIDUAL DO ENQUADRAMENTO DA CÂMERA */
+
+/* 1. Dr. Luiz Gustavo - Centralizado padrão */
+.medico-item-card:nth-child(1) .medico-img {
+  object-position: center center; 
+}
+
+/* 2. Dr. Italo Silva - Levemente centralizado para o rosto */
+.medico-item-card:nth-child(2) .medico-img {
+  object-position: center 25%; 
+}
+
+/* 3. Dr. Anderson - CALIBRAÇÃO REFEITA 🌟
+   Mudamos para 20% para focar na parte de cima da foto original e enquadrar os olhos e o rosto perfeitamente! */
+.medico-item-card:nth-child(3) .medico-img {
+  object-position: center 20% !important; 
+}
+
+/* Selo da especialidade */
+.medico-tag-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;               
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   DETALHES E INFORMAÇÕES DO CARD
+   ========================================================================== */
+
+.medico-details-box {
+  padding: 1.5rem;
+}
+
+.medico-card-name {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.medico-card-crm {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0 0;
+}
+
+.medico-card-divider {
+  border-top: 1px solid #f1f5f9;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.medico-card-subtitle {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.medico-card-text {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.medico-card-footer {
+  margin-top: 1.5rem;
+  background-color: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule-title {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  display: block;
+}
+
+.schedule-days {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   ESTADO VAZIO
+   ========================================================================== */
+
+.empty-results-box {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.empty-text {
+  color: #64748b;
+  margin-bottom: 1rem;
+}
