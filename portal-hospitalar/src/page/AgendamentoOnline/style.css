@@ -1,0 +1,79 @@
+.page-container {
+  padding: 60px 20px;
+  background-color: #eef2f7;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 600px;
+  border-top: 4px solid #0284c7;
+}
+
+.page-title {
+  color: #0f172a;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.page-subtitle {
+  color: #475569;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.health-form .input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.health-form label {
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.health-form input, .health-form select, .health-form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.health-form input:focus, .health-form select:focus, .health-form textarea:focus {
+  outline: none;
+  border-color: #0284c7;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
