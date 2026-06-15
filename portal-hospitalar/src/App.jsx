@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 
-// IMPORTAÇÃO DE TODAS AS 9 PÁGINAS DO PORTAL
+// IMPORTAÇÃO DE TODAS AS PÁGINAS DO PORTAL
 
-// 👤 Suas Páginas (Integrante A) - ATIVAS
+// 👤 Páginas do Integrante A - ATIVAS
 import Home from './page/Home/index';
 import QuemSomos from './page/QuemSomos/index';
 import Blog from './page/Blog/index';
@@ -17,10 +17,10 @@ import Blog from './page/Blog/index';
 // import CorpoClinico from './page/CorpoClinico/index';
 // import Ouvidoria from './page/Ouvidoria/index';
 
-// 👤 Páginas do Integrante C - COMENTADO (Ative quando seu colega terminar)
-// import Contato from './page/Contato/index';
-// import Agendamento from './page/Agendamento/index';
-// import TrabalheConosco from './page/TrabalheConosco/index';
+// 👤 Suas Páginas (Integrante C) - AGORA ATIVAS! 🚀
+import Contato from './page/Contato/index';
+import AgendamentoOnline from './page/AgendamentoOnline/index'; // <-- Nome ajustado para bater com a nossa pasta
+import TrabalheConosco from './page/TrabalheConosco/index';
 
 export default function App() {
   return (
@@ -31,7 +31,7 @@ export default function App() {
       {/* Área dinâmica onde as suas páginas vão alternar */}
       <main style={{ minHeight: '80vh' }}>
         <Routes>
-          {/* Suas Rotas (Integrante A) - ATIVAS */}
+          {/* Rotas do Integrante A - ATIVAS */}
           <Route path="/" element={<Home />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/blog" element={<Blog />} />
@@ -42,11 +42,10 @@ export default function App() {
           <Route path="/ouvidoria" element={<Ouvidoria />} />
           */}
 
-          {/* COMENTADO: Rotas do Integrante C
+          {/* Suas Rotas (Integrante C) - AGORA ATIVAS! 🚀 */}
           <Route path="/contato" element={<Contato />} />
-          <Route path="/agendamento" element={<Agendamento />} />
+          <Route path="/agendamento" element={<AgendamentoOnline />} />
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
-          */}
         </Routes>
       </main>
 
