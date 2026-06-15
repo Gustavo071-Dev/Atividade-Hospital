@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Importação dos Componentes Globais (A cargo do restante do trio)
-// COMENTADO:
-// import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
+// Importação dos Componentes Globais (Ativados para o seu teste!)
+import Header from './components/Header/index';
+import Footer from './components/Footer/index';
 
 // IMPORTAÇÃO DE TODAS AS 9 PÁGINAS DO PORTAL
 
@@ -13,12 +12,12 @@ import Home from './page/Home/index';
 import QuemSomos from './page/QuemSomos/index';
 import Blog from './page/Blog/index';
 
-// 👤 Páginas do Integrante B - COMENTADO
+// 👤 Páginas do Integrante B - COMENTADO (Ative quando seu colega terminar)
 // import Servicos from './page/Servicos/index';
 // import CorpoClinico from './page/CorpoClinico/index';
 // import Ouvidoria from './page/Ouvidoria/index';
 
-// 👤 Páginas do Integrante C - COMENTADO
+// 👤 Páginas do Integrante C - COMENTADO (Ative quando seu colega terminar)
 // import Contato from './page/Contato/index';
 // import Agendamento from './page/Agendamento/index';
 // import TrabalheConosco from './page/TrabalheConosco/index';
@@ -26,10 +25,10 @@ import Blog from './page/Blog/index';
 export default function App() {
   return (
     <Router>
-      {/* COMENTADO: O Navbar precisa ser comentado aqui dentro do HTML/JSX também */}
-      {/* <Navbar /> */}
+      {/* O Header fica ativo no topo de todas as páginas */}
+      <Header />
 
-      {/* Área dinâmica onde as páginas vão alternar dependendo da URL */}
+      {/* Área dinâmica onde as suas páginas vão alternar */}
       <main style={{ minHeight: '80vh' }}>
         <Routes>
           {/* Suas Rotas (Integrante A) - ATIVAS */}
@@ -51,8 +50,8 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* COMENTADO: O Footer também precisa ser comentado aqui dentro */}
-      {/* <Footer /> */}
+      {/* O Footer fica ativo no rodapé de todas as páginas */}
+      <Footer />
     </Router>
   );
 }
