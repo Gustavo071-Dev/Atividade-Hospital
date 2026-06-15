@@ -1,0 +1,133 @@
+.ouvidoria-container {
+  padding: 3rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ouvidoria-header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ouvidoria-title {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.ouvidoria-text {
+  font-size: 1.15rem;
+  color: #64748b;
+}
+
+.faq-box-container, .form-box-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin: 0 0 1.5rem 0;
+  color: #1e293b;
+  font-size: 1.35rem;
+}
+
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-row-item {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 1rem;
+}
+
+.faq-row-item:last-child { border: none; }
+
+.faq-toggle-button {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  outline: none;
+}
+
+.faq-answer-panel {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.faq-answer-panel p { margin: 0; }
+
+.ouvidoria-html-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.form-text-input, .form-select-input, .form-textarea-input {
+  padding: 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-text-input:focus, .form-select-input:focus, .form-textarea-input:focus {
+  border-color: #2563eb;
+}
+
+.form-double-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .form-double-column { grid-template-columns: repeat(2, 1fr); }
+}
+
+.form-submit-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.success-message-banner {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #166534;
+}
+
+.success-message-banner h3 { margin: 0 0 0.5rem 0; }
+.success-message-banner p { margin: 0 0 1.5rem 0; }

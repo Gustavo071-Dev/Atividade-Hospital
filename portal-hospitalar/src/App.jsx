@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Importação dos Componentes Globais (Ativados para o seu teste!)
+// Importação dos Componentes Globais
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 
@@ -12,10 +12,10 @@ import Home from './page/Home/index';
 import QuemSomos from './page/QuemSomos/index';
 import Blog from './page/Blog/index';
 
-// 👤 Páginas do Integrante B - COMENTADO (Ative quando seu colega terminar)
-// import Servicos from './page/Servicos/index';
-// import CorpoClinico from './page/CorpoClinico/index';
-// import Ouvidoria from './page/Ouvidoria/index';
+// 👤 Páginas do Integrante B - AGORA ATIVAS (Respeitando a acentuação das suas pastas)
+import Servicos from './page/Serviços/index';
+import CorpoClinico from './page/CorpoClínico/index';
+import Ouvidoria from './page/Ouvidoria/index';
 
 // 👤 Suas Páginas (Integrante C) - AGORA ATIVAS! 🚀
 import Contato from './page/Contato/index';
@@ -28,7 +28,7 @@ export default function App() {
       {/* O Header fica ativo no topo de todas as páginas */}
       <Header />
 
-      {/* Área dinâmica onde as suas páginas vão alternar */}
+      {/* Área dinâmica onde as páginas vão alternar */}
       <main style={{ minHeight: '80vh' }}>
         <Routes>
           {/* Rotas do Integrante A - ATIVAS */}
@@ -36,11 +36,10 @@ export default function App() {
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/blog" element={<Blog />} />
 
-          {/* COMENTADO: Rotas do Integrante B
+          {/* Rotas do Integrante B - AGORA ATIVAS */}
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/corpo-clinico" element={<CorpoClinico />} />
           <Route path="/ouvidoria" element={<Ouvidoria />} />
-          */}
 
           {/* Suas Rotas (Integrante C) - AGORA ATIVAS! 🚀 */}
           <Route path="/contato" element={<Contato />} />
