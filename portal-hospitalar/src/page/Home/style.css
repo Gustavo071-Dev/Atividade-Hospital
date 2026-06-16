@@ -1,19 +1,23 @@
+/* CONTAINER GERAL */
 .home-container {
   font-family: Arial, sans-serif;
   color: #333;
+  line-height: 1.6;
 }
 
+/* SEÇÃO HERO */
 .hero-section {
   background-color: #eef2f7;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   border-bottom: 4px solid #0284c7;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #0f172a;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .hero-text {
@@ -23,15 +27,23 @@
   margin: 0 auto 30px;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BOTÕES */
 .btn-primary {
   background-color: #0284c7;
   color: white;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  margin-right: 15px;
   transition: background 0.2s;
 }
 
@@ -42,10 +54,11 @@
 .btn-secondary {
   background-color: transparent;
   color: #0284c7;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: 2px solid #0284c7;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -55,36 +68,131 @@
   color: white;
 }
 
+/* SEÇÃO DE DIFERENCIAIS (FEATURES) */
 .features-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .features-title {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 40px;
   color: #0f172a;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: '30px';
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px; /* Corrigido: sem aspas para funcionar corretamente */
 }
 
 .feature-card {
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   background-color: #fff;
+  border-top: 4px solid #0284c7;
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 
 .feature-card h3 {
-  color: #0284c7;
-  margin-bottom: 10px;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .feature-card p {
   color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* SEÇÃO DE HORÁRIOS / INFORMAÇÕES */
+.info-section {
+  background-color: #f8fafc;
+  padding: 60px 20px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-text h2 {
+  color: #0f172a;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-text p {
+  text-align: center;
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-text ul li {
+  padding: 12px 15px;
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-left: 4px solid #38bdf8;
+}
+
+/* SEÇÃO FAQ */
+.faq-section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.faq-item h4 {
+  margin: 0 0 10px 0;
+  color: #0284c7;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
 }

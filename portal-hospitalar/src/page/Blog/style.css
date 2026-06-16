@@ -1,3 +1,4 @@
+/* CONTAINER GERAL */
 .blog-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* CABEÇALHO */
 .blog-header {
   text-align: center;
   margin-bottom: 50px;
@@ -12,39 +14,71 @@
 
 .blog-header h1 {
   color: #0f172a;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
 }
 
 .blog-header p {
   color: #64748b;
   font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+/* NOVO LAYOUT DO BLOG (COLUNAS) */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 3fr 1fr; /* Artigos ocupam a maior parte, sidebar a menor */
+  }
+}
+
+/* GRID DE ARTIGOS */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
+/* CARDS DOS POSTS */
 .blog-card {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   border: 1px solid #e2e8f0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card-image-placeholder {
-  height: 180px;
-  background-color: #cbd5e1;
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* CAPAS ESTILIZADAS COM GRADIENTES */
+.card-image-cover {
+  height: 160px;
   display: flex;
   align-items: center;
-  justify-center: center;
-  color: #64748b;
+  justify-content: center; /* Corrigido de justify-center para o padrão CSS */
 }
 
+.cover-cat-nutrição { background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%); }
+.cover-cat-prevenção { background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%); }
+.cover-cat-urologia { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); }
+
+.cover-icon {
+  font-size: 3rem;
+}
+
+/* CONTEÚDO DO CARD */
 .card-content {
   padding: 20px;
   flex-grow: 1;
@@ -56,14 +90,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .card-category {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #0284c7;
   text-transform: uppercase;
+  background-color: #f0f9ff;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .card-date {
@@ -72,7 +109,7 @@
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #0f172a;
   margin: 0 0 10px 0;
   line-height: 1.4;
@@ -80,8 +117,8 @@
 
 .card-summary {
   color: #475569;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.6;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -93,9 +130,88 @@
   font-size: 0.9rem;
   display: inline-block;
   margin-top: auto;
-  transition: color 0.2s;
+  transition: transform 0.2s;
 }
 
 .card-link:hover {
   color: #0369a1;
+  transform: translateX(3px);
+}
+
+/* ESTILIZAÇÃO DA SIDEBAR */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar-widget {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.sidebar-widget h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* CAMPO DE BUSCA */
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.search-box button {
+  background-color: #0284c7;
+  border: none;
+  color: white;
+  padding: 0 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* LISTA DE CATEGORIAS */
+.sidebar-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-categories li {
+  margin-bottom: 10px;
+}
+
+.sidebar-categories li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-categories a {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-categories a:hover {
+  color: #0284c7;
+}
+
+.sidebar-categories span {
+  color: #94a3b8;
+  font-size: 0.85rem;
 }
